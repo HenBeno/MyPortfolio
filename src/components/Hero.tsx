@@ -86,7 +86,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            {badges.map((badge, index) => {
+            {badges.map((badge) => {
               const Icon = badge.icon;
               return (
                 <span
