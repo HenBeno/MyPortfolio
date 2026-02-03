@@ -10,16 +10,16 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Hen Benoish",
-    "title1": "Senior Automation & QA Engineer",
-    "title2": "Tech Lead / Technical Manager",
-    "title3": "Infrastructure Architect",
-    "subtitle": "QA Engineer who's first an Engineer, Automation that's Infrastructure, BDD that's a collaboration tool",
+    "title1": "Automation Developer",
+    "title2": "Tests & Infrastructure",
+    "title3": "Tech Lead",
+    "subtitle": "Automation Developer who builds infrastructure, not just tests. Turning automation into a product, not a burden.",
     "cta1": "View My Work",
     "cta2": "Get In Touch"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I'm a Senior Automation & QA Engineer with a strong engineering-architectural focus. I don't just write tests—I build complex automation infrastructures that actually scale. Think of me as the bridge between manual testers, Cucumber, and full automation, with a knack for turning testing into a product, not a burden.",
+    "paragraph1": "I'm an Automation Developer specializing in tests and infrastructure development. I don't just write tests—I build complex automation infrastructures that actually scale. Think of me as the bridge between manual testers, Cucumber, and full automation, with a knack for turning automation into a product, not a burden.",
     "paragraph2": "Currently serving as Tech Lead and Technical Manager at Bank Leumi, I'm a key player in high-stakes banking projects where reliability isn't optional. I lead organizational change by introducing Cucumber to non-technical testers, improving collaboration with development teams, and delivering training that actually sticks. My approach? Stop and think about design before rushing to write code—because a smart BaseTest, dynamic timeouts, and clean OOP architecture make all the difference.",
     "paragraph3": "I'm always thinking ahead: how does this look in 1-2 years? How do we make automation a product, not just a regression runner? I'm exploring AI + Automation, Playwright, visual validation with Computer Vision, and React Native automation that's actually smart, not brittle. With ~3+ years of hands-on automation experience (but the mindset of someone with much more), I'm looking for impact, technical depth, and places that value infrastructure thinking over test-count metrics."
   },
@@ -27,10 +27,22 @@
     "title": "Professional Experience",
     "current": "Current",
     "leumi": {
-      "title": "Head of Automation in Private Digital & Team Lead",
+      "title": "Automation & Infrastructure Developer & Tech Lead",
       "company": "Bank Leumi",
       "period": "2023 - Present",
       "description": "Leading automation infrastructure development for critical banking systems. Managing the entire testing domain—both manual and automation—while driving organizational transformation. I bridge the gap between manual testers and automation through Cucumber, enabling non-technical team members to contribute to automated testing. I've improved collaboration with development teams, delivered engaging lectures and training sessions, and built frameworks that emphasize design-first thinking, clean OOP architecture, and scalable infrastructure. My work focuses on high-stakes systems where reliability and maintainability are non-negotiable."
+    },
+    "intelLead": {
+      "title": "Validation & Automation Team Lead",
+      "company": "Intel Corporation",
+      "period": "2022 - 2023",
+      "description": "Coordinated Agile task execution and division according to SAFe methodology. Managed recruitment, interviews, and training for new team members. Led the validation and automation team in testing and validating Intel network interface cards (E810) & NICs during the post-PRQ phase."
+    },
+    "intelDev": {
+      "title": "Validation & Automation Developer",
+      "company": "Intel Corporation",
+      "period": "2021 - 2022",
+      "description": "Tested and validated Intel network interface cards (E810) & NICs during the post-PRQ phase. Executed test plans based on Design Change Requests and System Architect documentation. Developed and maintained regression tests in Python & Bash scripts integrated with Azure DevOps pipeline. Designed complex end-to-end test systems on Linux and Windows, including API testing with Python. Worked with IXIA (IxNetwork/IxExplorer) to ensure reliable validation processes."
     }
   },
   "skills": {
