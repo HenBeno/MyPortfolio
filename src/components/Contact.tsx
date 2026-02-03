@@ -81,7 +81,7 @@ const Contact = () => {
           </div>
 
           <motion.a
-            href="/assets/Hen%20Benoish%20CV%202025.docx"
+            href={`${import.meta.env.BASE_URL}assets/Hen Benoish CV 2025.docx`}
             download="Hen Benoish CV 2025.docx"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
