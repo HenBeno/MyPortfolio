@@ -56,7 +56,25 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
+        <div className="flex flex-col items-center justify-center gap-12">
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-48 md:w-64 lg:w-80"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl transform scale-110"></div>
+              <img
+                src={`${import.meta.env.BASE_URL}assets/images/profile.jpg`}
+                alt="Hen Benoish"
+                className="relative w-full h-auto rounded-full border-4 border-primary/30 shadow-2xl"
+              />
+            </div>
+          </motion.div>
+
+          <div className="text-center flex-1">
           {/* Greeting */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -129,6 +147,7 @@ const Hero = () => {
               {t('hero.cta2')}
             </button>
           </motion.div>
+          </div>
         </div>
       </div>
 

@@ -54,32 +54,44 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-dark-card border-2 border-primary/50 rounded-lg p-8 hover:border-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-all"
+            className="bg-dark-card border-2 border-primary/50 rounded-lg p-8 hover:border-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-all overflow-hidden"
           >
-            <div className="flex items-start justify-between mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-dark-text mb-2">
-                  {t('projects.gherkinMate.title')}
-                </h3>
-                <span className="text-primary text-sm font-mono">{t('projects.gherkinMate.year')}</span>
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-dark-text mb-2">
+                      {t('projects.gherkinMate.title')}
+                    </h3>
+                    <span className="text-primary text-sm font-mono">{t('projects.gherkinMate.year')}</span>
+                  </div>
+                  <Code2 className="text-primary" size={32} />
+                </div>
+                <p className="text-dark-muted mb-4 leading-relaxed">
+                  {t('projects.gherkinMate.description')}
+                </p>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-xs text-dark-muted">{t('projects.gherkinMate.tech')}</span>
+                </div>
+                <a
+                  href="https://www.linkedin.com/posts/hen-benoish_%D7%91%D7%AA%D7%95%D7%A8-%D7%9E%D7%A4%D7%AA%D7%97-%D7%AA%D7%A9%D7%AA%D7%99%D7%95%D7%AA-%D7%90%D7%95%D7%98%D7%95%D7%9E%D7%A6%D7%99%D7%94-%D7%A9%D7%9E%D7%90%D7%9E%D7%A5-%D7%A7%D7%99%D7%93%D7%9E%D7%94-%D7%95%D7%98%D7%9B%D7%A0%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94-activity-7419030890095243266-W0zX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADNQ8vUBZEUk_SfvFR008caBHeECiUHI-zw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary-light transition-colors font-medium"
+                >
+                  {t('projects.gherkinMate.link')}
+                  <ExternalLink size={16} />
+                </a>
               </div>
-              <Code2 className="text-primary" size={32} />
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/10 rounded-lg blur-xl transform scale-105"></div>
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/images/gherkinmate.png`}
+                  alt="GherkinMate Project"
+                  className="relative w-full h-auto rounded-lg border border-primary/20 shadow-xl"
+                />
+              </div>
             </div>
-            <p className="text-dark-muted mb-4 leading-relaxed">
-              {t('projects.gherkinMate.description')}
-            </p>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-xs text-dark-muted">{t('projects.gherkinMate.tech')}</span>
-            </div>
-            <a
-              href="https://github.com/HenBeno?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-light transition-colors font-medium"
-            >
-              {t('projects.gherkinMate.link')}
-              <ExternalLink size={16} />
-            </a>
           </motion.div>
 
           {/* GitHub Projects */}

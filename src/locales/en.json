@@ -63,7 +63,7 @@
       "description": "A web-based system that bridges the gap between manual testers and automation. GherkinMate enables non-technical testers to write Cucumber scenarios that seamlessly integrate into automation frameworks. It's designed with a light, approachable interface—complete with a ready-made script in Hebrew (with Gherkin in English) that's humorous and non-intimidating. This project embodies my philosophy: automation should be a collaboration tool, not a barrier.",
       "tech": "Web Development, Cucumber, BDD Framework",
       "year": "2025",
-      "link": "View on GitHub"
+      "link": "View my article about GherkinMate"
     },
     "github": {
       "title": "GitHub Projects",
