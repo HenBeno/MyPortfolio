@@ -81,8 +81,8 @@ const Contact = () => {
           </div>
 
           <motion.a
-            href="/assets/resume.pdf"
-            download
+            href="/assets/Hen%20Benoish%20CV%202025.docx"
+            download="Hen Benoish CV 2025.docx"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
