@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Hen Benoish",
+    "title1": "Automation Infrastructure Team Lead",
+    "title2": "Full Stack QA Automation Developer",
+    "title3": "AI Enthusiast",
+    "subtitle": "Building smart frameworks that actually scale",
+    "cta1": "View My Work",
+    "cta2": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a passionate automation professional and 'Practical Software Engineer' with extensive experience in developing automation frameworks and leading technical teams. Currently serving as Head of Automation in Private Digital & Team Lead at Bank Leumi, I specialize in creating practical, scalable solutions that drive efficiency and quality.",
+    "paragraph2": "My approach combines hands-on engineering with strategic leadership, focusing on building robust automation infrastructures that empower teams to deliver exceptional results. I'm constantly exploring new technologies and methodologies, including AI Agents, Cursor AI, and AWS Bedrock, to stay at the forefront of the automation field.",
+    "paragraph3": "Beyond my professional roles, I'm an avid learner and technology enthusiast. I'm a self-proclaimed 'Udemy addict' who continuously expands my knowledge, and I enjoy coding as a hobby, always experimenting with new tools and frameworks. I'm also a gadget enthusiast who loves staying on top of the latest tech innovations."
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current": "Current",
+    "leumi": {
+      "title": "Head of Automation in Private Digital & Team Lead",
+      "company": "Bank Leumi",
+      "period": "2023 - Present",
+      "description": "Leading automation infrastructure development and managing high-performance teams. Driving technical excellence in automation frameworks, CI/CD pipelines, and AI agent development. Implementing best practices in software development and quality assurance."
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "description": "Extensive experience with modern automation tools, DevOps practices, and cutting-edge AI technologies.",
+    "languages": "Programming Languages",
+    "frameworks": "Automation & Testing",
+    "devops": "Infrastructure & CI/CD",
+    "ai": "AI & Innovation"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "gherkinMate": {
+      "title": "GherkinMate",
+      "description": "A web-based system I developed to enable manual testers to write automation scripts easily. This innovative project makes automation more approachable for teams transitioning from manual to automated testing.",
+      "tech": "Web Development, Automation Framework",
+      "year": "2025",
+      "link": "View on GitHub"
+    },
+    "github": {
+      "title": "GitHub Projects",
+      "description": "Explore my open-source contributions and personal projects on GitHub.",
+      "link": "View on GitHub"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm always open to discussing new opportunities, innovative projects, or just connecting with fellow professionals.",
+    "message": "Let's connect and explore how we can work together!",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email",
+    "downloadResume": "Download Resume"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "built": "Built with",
+    "and": "and"
+  }
+}

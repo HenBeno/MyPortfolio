@@ -1,0 +1,126 @@
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import {
+  Code2,
+  TestTube,
+  Server,
+  Brain,
+  Coffee,
+  GitBranch,
+  Container,
+  Sparkles,
+  PlayCircle,
+  Workflow,
+} from 'lucide-react';
+
+const Skills = () => {
+  const { t } = useTranslation();
+
+  const skillCategories = [
+    {
+      key: 'languages',
+      icon: Code2,
+      color: 'text-blue-400',
+      skills: [
+        { name: 'Java', icon: Coffee },
+        { name: 'Python', icon: Code2 },
+        { name: 'TypeScript', icon: Code2 },
+      ],
+    },
+    {
+      key: 'frameworks',
+      icon: TestTube,
+      color: 'text-green-400',
+      skills: [
+        { name: 'Selenium', icon: TestTube },
+        { name: 'Cucumber', icon: Coffee },
+        { name: 'Appium', icon: PlayCircle },
+        { name: 'Playwright', icon: PlayCircle },
+      ],
+    },
+    {
+      key: 'devops',
+      icon: Server,
+      color: 'text-purple-400',
+      skills: [
+        { name: 'Jenkins', icon: Workflow },
+        { name: 'CI/CD', icon: GitBranch },
+        { name: 'Docker', icon: Container },
+      ],
+    },
+    {
+      key: 'ai',
+      icon: Brain,
+      color: 'text-cyan-400',
+      skills: [
+        { name: 'AI Agents', icon: Sparkles },
+        { name: 'Cursor AI', icon: Brain },
+        { name: 'AWS Bedrock', icon: Server },
+      ],
+    },
+  ];
+
+  return (
+    <section id="skills" className="py-20 md:py-32 bg-dark-surface">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-bold text-dark-text mb-4 text-center"
+        >
+          {t('skills.title')}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-dark-muted text-center mb-12 text-lg"
+        >
+          {t('skills.description')}
+        </motion.p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {skillCategories.map((category, categoryIndex) => {
+            const CategoryIcon = category.icon;
+            return (
+              <motion.div
+                key={category.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+                className="bg-dark-card border border-dark-border rounded-lg p-6 hover:border-primary/50 transition-all"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <CategoryIcon className={category.color} size={24} />
+                  <h3 className="text-xl font-bold text-dark-text">
+                    {t(`skills.${category.key}`)}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => {
+                    const SkillIcon = skill.icon;
+                    return (
+                      <span
+                        key={skillIndex}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-dark-bg border border-dark-border rounded-lg text-dark-text hover:border-primary hover:text-primary transition-all"
+                      >
+                        <SkillIcon size={16} />
+                        <span className="text-sm font-medium">{skill.name}</span>
+                      </span>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;

@@ -1,0 +1,77 @@
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { Briefcase, Calendar } from 'lucide-react';
+import { useRTL } from '../hooks/useRTL';
+
+const Experience = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useRTL();
+
+  return (
+    <section id="experience" className="py-20 md:py-32 bg-dark-bg">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-bold text-dark-text mb-16 text-center"
+        >
+          {t('experience.title')}
+        </motion.h2>
+
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            {/* Timeline Line */}
+            <div 
+              className="absolute top-0 bottom-0 w-0.5 bg-primary/30"
+              style={isRTL ? { right: '2rem' } : { left: '2rem' }}
+            />
+
+            {/* Experience Item */}
+            <div 
+              className="relative mb-12"
+              style={isRTL ? { paddingRight: '5rem' } : { paddingLeft: '5rem' }}
+            >
+              {/* Timeline Marker */}
+              <div 
+                className="absolute top-2 w-16 h-16 rounded-full bg-dark-card border-4 border-primary flex items-center justify-center"
+                style={isRTL ? { right: 0 } : { left: 0 }}
+              >
+                <Briefcase className="text-primary" size={24} />
+              </div>
+
+              {/* Content Card */}
+              <div className="bg-dark-card border border-dark-border rounded-lg p-6 hover:border-primary/50 transition-all">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full">
+                    {t('experience.current')}
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-dark-text mb-2">
+                  {t('experience.leumi.title')}
+                </h3>
+                <h4 className="text-xl text-primary mb-3">{t('experience.leumi.company')}</h4>
+                <div className="flex items-center gap-2 text-dark-muted mb-4">
+                  <Calendar size={16} />
+                  <span>{t('experience.leumi.period')}</span>
+                </div>
+                <p className="text-dark-muted leading-relaxed">
+                  {t('experience.leumi.description')}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;
