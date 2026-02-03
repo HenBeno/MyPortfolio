@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Globe } from 'lucide-react';
-import { useRTL } from '../hooks/useRTL';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
-  const { isRTL } = useRTL();
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -16,11 +14,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'he' : 'en';
-    i18n.changeLanguage(newLang);
-  };
 
   const navItems = [
     { key: 'home', href: '#home' },
@@ -62,9 +55,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div 
-            className={`hidden md:flex items-center ${isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'}`}
-          >
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.key}
@@ -80,25 +71,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Language Toggle & Mobile Menu Button */}
-          <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-2 rtl:space-x-reverse px-3 py-2 rounded-lg bg-dark-card hover:bg-dark-border border border-dark-border transition-colors text-dark-text"
-              aria-label="Toggle language"
-            >
-              <Globe size={18} />
-              <span className="text-sm font-medium">{i18n.language === 'en' ? 'HE' : 'EN'}</span>
-            </button>
-
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-dark-text hover:text-primary transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-dark-text hover:text-primary transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}

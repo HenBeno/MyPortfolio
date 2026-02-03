@@ -1,11 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
-import { useRTL } from '../hooks/useRTL';
 
 const Experience = () => {
   const { t } = useTranslation();
-  const { isRTL } = useRTL();
 
   return (
     <section id="experience" className="py-20 md:py-32 bg-dark-bg">
@@ -22,7 +20,7 @@ const Experience = () => {
 
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -30,20 +28,13 @@ const Experience = () => {
           >
             {/* Timeline Line */}
             <div 
-              className="absolute top-0 bottom-0 w-0.5 bg-primary/30"
-              style={isRTL ? { right: '2rem' } : { left: '2rem' }}
+              className="absolute top-0 bottom-0 left-8 w-0.5 bg-primary/30"
             />
 
             {/* Experience Item */}
-            <div 
-              className="relative mb-12"
-              style={isRTL ? { paddingRight: '5rem' } : { paddingLeft: '5rem' }}
-            >
+            <div className="relative mb-12 pl-20">
               {/* Timeline Marker */}
-              <div 
-                className="absolute top-2 w-16 h-16 rounded-full bg-dark-card border-4 border-primary flex items-center justify-center"
-                style={isRTL ? { right: 0 } : { left: 0 }}
-              >
+              <div className="absolute top-2 left-0 w-16 h-16 rounded-full bg-dark-card border-4 border-primary flex items-center justify-center">
                 <Briefcase className="text-primary" size={24} />
               </div>
 

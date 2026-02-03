@@ -7,10 +7,15 @@ import {
   Brain,
   Coffee,
   GitBranch,
-  Container,
   Sparkles,
   PlayCircle,
   Workflow,
+  Smartphone,
+  Globe,
+  FileText,
+  Database,
+  Eye,
+  Zap,
 } from 'lucide-react';
 
 const Skills = () => {
@@ -25,37 +30,73 @@ const Skills = () => {
         { name: 'Java', icon: Coffee },
         { name: 'Python', icon: Code2 },
         { name: 'TypeScript', icon: Code2 },
+        { name: 'C#', icon: Code2 },
       ],
     },
     {
-      key: 'frameworks',
-      icon: TestTube,
+      key: 'mobile',
+      icon: Smartphone,
       color: 'text-green-400',
       skills: [
+        { name: 'Appium', icon: Smartphone },
+        { name: 'UiAutomator2', icon: Smartphone },
+        { name: 'Verisoft', icon: Smartphone },
+        { name: 'Perfecto Mobile', icon: Smartphone },
+      ],
+    },
+    {
+      key: 'web',
+      icon: Globe,
+      color: 'text-cyan-400',
+      skills: [
         { name: 'Selenium', icon: TestTube },
-        { name: 'Cucumber', icon: Coffee },
-        { name: 'Appium', icon: PlayCircle },
+        { name: 'WebdriverIO', icon: TestTube },
         { name: 'Playwright', icon: PlayCircle },
+      ],
+    },
+    {
+      key: 'bdd',
+      icon: FileText,
+      color: 'text-yellow-400',
+      skills: [
+        { name: 'Cucumber', icon: FileText },
+        { name: 'Gherkin', icon: FileText },
+        { name: 'BDD Practices', icon: FileText },
+      ],
+    },
+    {
+      key: 'backend',
+      icon: Database,
+      color: 'text-purple-400',
+      skills: [
+        { name: 'REST API', icon: Database },
+        { name: 'Proxy/Apigee', icon: Server },
+        { name: 'Swagger/OpenAPI', icon: FileText },
+        { name: 'Kibana', icon: Database },
       ],
     },
     {
       key: 'devops',
       icon: Server,
-      color: 'text-purple-400',
+      color: 'text-orange-400',
       skills: [
+        { name: 'Maven', icon: Workflow },
         { name: 'Jenkins', icon: Workflow },
-        { name: 'CI/CD', icon: GitBranch },
-        { name: 'Docker', icon: Container },
+        { name: 'Azure DevOps', icon: GitBranch },
+        { name: 'ReportPortal', icon: Server },
+        { name: 'Git/Bitbucket', icon: GitBranch },
       ],
     },
     {
-      key: 'ai',
+      key: 'emerging',
       icon: Brain,
-      color: 'text-cyan-400',
+      color: 'text-pink-400',
       skills: [
-        { name: 'AI Agents', icon: Sparkles },
-        { name: 'Cursor AI', icon: Brain },
-        { name: 'AWS Bedrock', icon: Server },
+        { name: 'AI + Automation', icon: Sparkles },
+        { name: 'Playwright', icon: PlayCircle },
+        { name: 'Robot Framework', icon: Zap },
+        { name: 'Visual Validation', icon: Eye },
+        { name: 'React Native', icon: Smartphone },
       ],
     },
   ];
@@ -82,7 +123,7 @@ const Skills = () => {
           {t('skills.description')}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {skillCategories.map((category, categoryIndex) => {
             const CategoryIcon = category.icon;
             return (

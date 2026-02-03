@@ -10,18 +10,18 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Hen Benoish",
-    "title1": "Automation Infrastructure Team Lead",
-    "title2": "Full Stack QA Automation Developer",
-    "title3": "AI Enthusiast",
-    "subtitle": "Building smart frameworks that actually scale",
+    "title1": "Senior Automation & QA Engineer",
+    "title2": "Tech Lead / Technical Manager",
+    "title3": "Infrastructure Architect",
+    "subtitle": "QA Engineer who's first an Engineer, Automation that's Infrastructure, BDD that's a collaboration tool",
     "cta1": "View My Work",
     "cta2": "Get In Touch"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I'm a passionate automation professional and 'Practical Software Engineer' with extensive experience in developing automation frameworks and leading technical teams. Currently serving as Head of Automation in Private Digital & Team Lead at Bank Leumi, I specialize in creating practical, scalable solutions that drive efficiency and quality.",
-    "paragraph2": "My approach combines hands-on engineering with strategic leadership, focusing on building robust automation infrastructures that empower teams to deliver exceptional results. I'm constantly exploring new technologies and methodologies, including AI Agents, Cursor AI, and AWS Bedrock, to stay at the forefront of the automation field.",
-    "paragraph3": "Beyond my professional roles, I'm an avid learner and technology enthusiast. I'm a self-proclaimed 'Udemy addict' who continuously expands my knowledge, and I enjoy coding as a hobby, always experimenting with new tools and frameworks. I'm also a gadget enthusiast who loves staying on top of the latest tech innovations."
+    "paragraph1": "I'm a Senior Automation & QA Engineer with a strong engineering-architectural focus. I don't just write tests—I build complex automation infrastructures that actually scale. Think of me as the bridge between manual testers, Cucumber, and full automation, with a knack for turning testing into a product, not a burden.",
+    "paragraph2": "Currently serving as Tech Lead and Technical Manager at Bank Leumi, I'm a key player in high-stakes banking projects where reliability isn't optional. I lead organizational change by introducing Cucumber to non-technical testers, improving collaboration with development teams, and delivering training that actually sticks. My approach? Stop and think about design before rushing to write code—because a smart BaseTest, dynamic timeouts, and clean OOP architecture make all the difference.",
+    "paragraph3": "I'm always thinking ahead: how does this look in 1-2 years? How do we make automation a product, not just a regression runner? I'm exploring AI + Automation, Playwright, visual validation with Computer Vision, and React Native automation that's actually smart, not brittle. With ~3+ years of hands-on automation experience (but the mindset of someone with much more), I'm looking for impact, technical depth, and places that value infrastructure thinking over test-count metrics."
   },
   "experience": {
     "title": "Professional Experience",
@@ -30,23 +30,26 @@
       "title": "Head of Automation in Private Digital & Team Lead",
       "company": "Bank Leumi",
       "period": "2023 - Present",
-      "description": "Leading automation infrastructure development and managing high-performance teams. Driving technical excellence in automation frameworks, CI/CD pipelines, and AI agent development. Implementing best practices in software development and quality assurance."
+      "description": "Leading automation infrastructure development for critical banking systems. Managing the entire testing domain—both manual and automation—while driving organizational transformation. I bridge the gap between manual testers and automation through Cucumber, enabling non-technical team members to contribute to automated testing. I've improved collaboration with development teams, delivered engaging lectures and training sessions, and built frameworks that emphasize design-first thinking, clean OOP architecture, and scalable infrastructure. My work focuses on high-stakes systems where reliability and maintainability are non-negotiable."
     }
   },
   "skills": {
     "title": "Skills & Technologies",
-    "description": "Extensive experience with modern automation tools, DevOps practices, and cutting-edge AI technologies.",
+    "description": "From mobile automation to backend APIs, from DevOps pipelines to emerging AI tools—building comprehensive automation infrastructures.",
     "languages": "Programming Languages",
-    "frameworks": "Automation & Testing",
-    "devops": "Infrastructure & CI/CD",
-    "ai": "AI & Innovation"
+    "mobile": "Mobile Automation",
+    "web": "Web Automation",
+    "bdd": "BDD & Collaboration",
+    "backend": "Backend & API Testing",
+    "devops": "DevOps & Infrastructure",
+    "emerging": "Emerging Interests"
   },
   "projects": {
     "title": "Featured Projects",
     "gherkinMate": {
       "title": "GherkinMate",
-      "description": "A web-based system I developed to enable manual testers to write automation scripts easily. This innovative project makes automation more approachable for teams transitioning from manual to automated testing.",
-      "tech": "Web Development, Automation Framework",
+      "description": "A web-based system that bridges the gap between manual testers and automation. GherkinMate enables non-technical testers to write Cucumber scenarios that seamlessly integrate into automation frameworks. It's designed with a light, approachable interface—complete with a ready-made script in Hebrew (with Gherkin in English) that's humorous and non-intimidating. This project embodies my philosophy: automation should be a collaboration tool, not a barrier.",
+      "tech": "Web Development, Cucumber, BDD Framework",
       "year": "2025",
       "link": "View on GitHub"
     },

@@ -2,7 +2,6 @@ import { useEffect, lazy, Suspense } from 'react';
 import './i18n';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import { useRTL } from './hooks/useRTL';
 
 // Lazy load components for better performance
 const About = lazy(() => import('./components/About'));
@@ -13,15 +12,13 @@ const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
-  const { isRTL } = useRTL();
-
   useEffect(() => {
     // Apply dark theme by default
     document.documentElement.classList.add('dark');
   }, []);
 
   return (
-    <div className={`min-h-screen bg-dark-bg text-dark-text ${isRTL ? 'rtl' : 'ltr'}`}>
+    <div className="min-h-screen bg-dark-bg text-dark-text ltr">
       <Navbar />
       <main>
         <Hero />

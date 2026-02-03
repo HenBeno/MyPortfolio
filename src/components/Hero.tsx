@@ -2,11 +2,9 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, Code, Zap, Brain } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useRTL } from '../hooks/useRTL';
 
 const Hero = () => {
   const { t } = useTranslation();
-  const { isRTL } = useRTL();
   const [displayedText, setDisplayedText] = useState('');
   const fullText = t('hero.subtitle');
 
@@ -51,7 +49,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: `linear-gradient(${isRTL ? '270deg' : '90deg'}, #00D9FF 1px, transparent 1px), linear-gradient(180deg, #00D9FF 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(90deg, #00D9FF 1px, transparent 1px), linear-gradient(180deg, #00D9FF 1px, transparent 1px)`,
             backgroundSize: '50px 50px',
           }}
         />
@@ -91,7 +89,7 @@ const Hero = () => {
               return (
                 <span
                   key={badge.key}
-                  className={`inline-flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'} px-4 py-2 bg-dark-card border border-primary/30 rounded-full text-primary text-sm md:text-base font-medium hover:border-primary hover:shadow-[0_0_15px_rgba(0,217,255,0.5)] transition-all`}
+                  className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-card border border-primary/30 rounded-full text-primary text-sm md:text-base font-medium hover:border-primary hover:shadow-[0_0_15px_rgba(0,217,255,0.5)] transition-all"
                 >
                   <Icon size={18} />
                   <span>{t(`hero.${badge.key}`)}</span>
