@@ -15,7 +15,8 @@
     "title3": "Tech Lead",
     "subtitle": "Automation Developer who builds infrastructure, not just tests. Turning automation into a product, not a burden.",
     "cta1": "View My Work",
-    "cta2": "Get In Touch"
+    "cta2": "Get In Touch",
+    "scroll": "Scroll"
   },
   "about": {
     "title": "About Me",
@@ -91,7 +92,8 @@
       "title": "GitHub Projects",
       "description": "Explore my open-source contributions and personal projects on GitHub.",
       "link": "View on GitHub"
-    }
+    },
+    "loading": "Loading projects..."
   },
   "contact": {
     "title": "Get In Touch",

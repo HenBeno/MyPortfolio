@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { User, BookOpen, Lightbulb } from 'lucide-react';
+import { useRTL } from '../hooks/useRTL';
 
 const About = () => {
   const { t } = useTranslation();
+  const { isRTL } = useRTL();
 
   const highlights = [
     { icon: User, key: 'highlight1' },
@@ -27,7 +29,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto mt-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}

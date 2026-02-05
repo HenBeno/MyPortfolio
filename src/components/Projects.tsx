@@ -119,7 +119,7 @@ const Projects = () => {
             <p className="text-dark-muted mb-6">{t('projects.github.description')}</p>
 
             {loading ? (
-              <div className="text-center py-8 text-dark-muted">Loading projects...</div>
+              <div className="text-center py-8 text-dark-muted">{t('projects.loading')}</div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {repos.slice(0, 4).map((repo, index) => (
