@@ -19,9 +19,19 @@
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I'm an Automation Developer working on test and infrastructure development, with a focus on building automation that teams can actually live with over time. Most of what I do sits between manual testers, Cucumber, and full automation — helping teams move forward without over-engineering or unnecessary complexity.",
-    "paragraph2": "Today, I'm a Tech Lead and Technical Manager at Bank Leumi, working on complex banking systems where stability and reliability really matter. A big part of my work is helping non-technical testers feel comfortable with Cucumber, improving day-to-day collaboration with developers, and making sure automation supports the team instead of slowing it down.",
-    "paragraph3": "I care a lot about design and long-term thinking. Spending time on architecture, BaseTest structure, timeout handling, and clean OOP usually pays off later — with frameworks that are easier to understand, maintain, and extend. I like thinking a step ahead: how this automation will look in a year or two, how it grows with the product, and how to keep it useful as things change. Lately, I've been exploring AI-assisted testing, Playwright, visual validation with computer vision, and smarter ways to automate React Native apps without making them fragile. With 3+ years of hands-on automation experience and a practical, infrastructure-first mindset, I'm looking for places that value thoughtful engineering, real collaboration, and building things that last."
+    "intro": "Automation Engineering: Where technological stability meets team efficiency. I believe that good automation isn't just code that runs - it's infrastructure that enables people to work better. Coming from the trenches and growing into leadership roles, my goal is to build systems that are both engineering-strong and accessible to the teams who use them every day.",
+    "techLeadTitle": "Tech Lead",
+    "techLeadIntro": "As a Tech Lead at Bank Leumi, I lead the technology strategy for automation projects in complex banking systems. My focus is on managing the interface between technology and people:",
+    "techLeadPoint1": "Making automation accessible: Turning Cucumber and complex testing into a friendly, approachable tool for testers without a technical background - because I believe collaboration is the key to quality.",
+    "techLeadPoint2": "Streamlining development: Creating synergy between developers and testers so that automation serves the product, speeds up delivery, and maintains high reliability over time.",
+    "engineeringTitle": "Architecture & Infrastructure (Engineering)",
+    "engineeringIntro": "My approach is \"Infrastructure First\". I invest in long-term thinking and design, because the right investment in the foundation is what prevents failures down the road:",
+    "engineeringPoint1": "Clean Code & OOP: Building infrastructure on clean OOP, stable BaseTest architecture, and smart resource management (timeouts), to create readable code that's easy to maintain and extend.",
+    "engineeringPoint2": "Technology pioneer: I'm always looking for the next step - from adopting AI tools and Playwright to computer-vision-based visual validation and advanced React Native automation.",
+    "quote": "I don't just build automation for today; I plan how it will look, grow, and stay relevant two years from now.",
+    "highlight1": "Automation Infrastructure Developer",
+    "highlight2": "Infrastructure First believer",
+    "highlight3": "Technology pioneer"
   },
   "experience": {
     "title": "Professional Experience",
@@ -29,25 +39,37 @@
     "leumi": {
       "title": "Automation & Infrastructure Developer & Tech Lead",
       "company": "Bank Leumi",
-      "period": "2023 - Present",
-      "description": "Leading automation infrastructure development for critical banking systems. Managing the entire testing domain—both manual and automation—while driving organizational transformation. I bridge the gap between manual testers and automation through Cucumber, enabling non-technical team members to contribute to automated testing. I've improved collaboration with development teams, delivered engaging lectures and training sessions, and built frameworks that emphasize design-first thinking, clean OOP architecture, and scalable infrastructure. My work focuses on high-stakes systems where reliability and maintainability are non-negotiable."
+      "period": "2023 – Present",
+      "description1": "Leading automation infrastructure development for critical banking systems and end-to-end management of the testing domain—manual and automated. In this role I drive organizational transformation in QA, with tight alignment between testing, development, and infrastructure.",
+      "description2": "I established and lead automation infrastructure based on Java, Appium, Selenium, JUnit, and Cucumber, applying Design-First principles, clean OOP, and scalable, maintainable architecture. I led the integration of manual testers into automation through Cucumber and Gherkin, enabling teams without a programming background to contribute to automated test scenarios.",
+      "description3": "I worked in close collaboration with development teams, led quality improvement processes, delivered lectures and professional training, and implemented advanced standards for test infrastructure development. The work is carried out on high business-impact systems, with emphasis on reliability, stability, long-term maintainability, and scale.",
+      "technologiesLabel": "Technologies & environments:",
+      "technologies": "Java · Appium · Selenium · JUnit · Cucumber · Maven · Jenkins · Perfecto · Mobile (Android & iOS) · REST APIs · Test Infrastructure · OOP · Design Patterns"
     },
     "intelLead": {
       "title": "Validation & Automation Team Lead",
       "company": "Intel Corporation",
-      "period": "2022 - 2023",
-      "description": "Coordinated Agile task execution and division according to SAFe methodology. Managed recruitment, interviews, and training for new team members. Led the validation and automation team in testing and validating Intel network interface cards (E810) & NICs during the post-PRQ phase."
+      "period": "2022 – 2023",
+      "description1": "Led validation and automation team on critical projects for validating Intel network interface cards (E810 & NICs) in Post-PRQ phases, with full responsibility for quality, meeting targets, and work processes.",
+      "description2": "Managed and coordinated tasks in an Agile environment according to SAFe methodology, including work allocation, prioritization, and execution tracking. Led recruitment, interviews, and onboarding of new team members, and built a professional, autonomous team.",
+      "description3": "Combined technical leadership with people management, working closely with development and architecture teams, and ensuring stable, reliable, scalable validation processes in complex environments.",
+      "technologiesLabel": "Key methodologies & technologies:",
+      "technologies": "Agile · SAFe · Team Leadership · Validation & Automation · Networking · E810 · NICs · Post-PRQ"
     },
     "intelDev": {
       "title": "Validation & Automation Developer",
       "company": "Intel Corporation",
-      "period": "2021 - 2022",
-      "description": "Tested and validated Intel network interface cards (E810) & NICs during the post-PRQ phase. Executed test plans based on Design Change Requests and System Architect documentation. Developed and maintained regression tests in Python & Bash scripts integrated with Azure DevOps pipeline. Designed complex end-to-end test systems on Linux and Windows, including API testing with Python. Worked with IXIA (IxNetwork/IxExplorer) to ensure reliable validation processes."
+      "period": "2021 – 2022",
+      "description1": "Testing and validation of network interface cards (E810 & NICs) in Post-PRQ phases, working closely with architecture documentation and Design Change Requests (DCR). Led end-to-end Test Plan authoring and execution, with emphasis on coverage, stability, and reliability.",
+      "description2": "Developed and maintained regression tests in Python and Bash, integrated with Azure DevOps Pipelines, including full automation of test processes. Designed and built E2E test systems on Linux and Windows, including API testing in Python.",
+      "description3": "Worked with advanced network validation tools such as IXIA (IxNetwork / IxExplorer) for traffic simulation, performance analysis, and reliable validation in complex environments.",
+      "technologiesLabel": "Technologies & environments:",
+      "technologies": "Python · Bash · Azure DevOps · Linux · Windows · API Testing · IXIA (IxNetwork, IxExplorer) · Networking · Test Plans · E2E Validation"
     }
   },
   "skills": {
     "title": "Skills & Technologies",
-    "description": "From mobile automation to backend APIs, from DevOps pipelines to emerging AI tools—building comprehensive automation infrastructures.",
+    "description": "From mobile automation to backend APIs, from DevOps pipelines to emerging AI tools - building comprehensive automation infrastructures.",
     "languages": "Programming Languages",
     "mobile": "Mobile Automation",
     "web": "Web Automation",
@@ -60,7 +82,7 @@
     "title": "Featured Projects",
     "gherkinMate": {
       "title": "GherkinMate",
-      "description": "A web-based system that bridges the gap between manual testers and automation. GherkinMate enables non-technical testers to write Cucumber scenarios that seamlessly integrate into automation frameworks. It's designed with a light, approachable interface—complete with a ready-made script in Hebrew (with Gherkin in English) that's humorous and non-intimidating. This project embodies my philosophy: automation should be a collaboration tool, not a barrier.",
+      "description": "An innovative Web system designed to make the world of automation accessible to manual testers and reduce the technological gap in the team. The system allows writing Cucumber scenarios without requiring a programming background, with a direct interface to existing automation infrastructures. It features accessible UX including a \"friendly guide\", based on the view that automation is an empowering tool for collaboration, not a technological barrier. The project led to shorter development times for test scripts and greater involvement of all team members in the QA process.",
       "tech": "Web Development, Cucumber, BDD Framework",
       "year": "2025",
       "link": "View my article about GherkinMate"

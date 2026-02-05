@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Languages } from 'lucide-react';
 
 const Navbar = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -32,6 +32,10 @@ const Navbar = () => {
     }
   };
 
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'he' : 'en');
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -55,8 +59,9 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-center space-x-8 rtl:space-x-reverse">
+              {navItems.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
@@ -69,6 +74,16 @@ const Navbar = () => {
                 {t(`nav.${item.key}`)}
               </a>
             ))}
+            </div>
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-dark-text hover:text-primary hover:bg-dark-surface/50 transition-colors font-medium"
+              aria-label={i18n.language === 'en' ? 'Switch to Hebrew' : 'החלף לאנגלית'}
+              title={i18n.language === 'en' ? 'עברית' : 'English'}
+            >
+              <Languages size={20} />
+              <span>{i18n.language === 'en' ? 'עב' : 'EN'}</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,6 +112,17 @@ const Navbar = () => {
                 {t(`nav.${item.key}`)}
               </a>
             ))}
+            <button
+              onClick={() => {
+                toggleLanguage();
+                setIsMenuOpen(false);
+              }}
+              className="flex items-center gap-2 w-full py-3 text-dark-text hover:text-primary transition-colors font-medium"
+              aria-label={i18n.language === 'en' ? 'Switch to Hebrew' : 'החלף לאנגלית'}
+            >
+              <Languages size={20} />
+              <span>{i18n.language === 'en' ? 'עברית' : 'English'}</span>
+            </button>
           </div>
         )}
       </div>

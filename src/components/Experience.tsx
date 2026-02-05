@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
 
 const Experience = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const experiences = [
     {
@@ -79,9 +79,25 @@ const Experience = () => {
                     <Calendar size={16} />
                     <span>{t(`experience.${exp.key}.period`)}</span>
                   </div>
-                  <p className="text-dark-muted leading-relaxed">
-                    {t(`experience.${exp.key}.description`)}
-                  </p>
+                  {i18n.exists(`experience.${exp.key}.description1`) ? (
+                    <div className="space-y-3 text-dark-muted leading-relaxed">
+                      <p>{t(`experience.${exp.key}.description1`)}</p>
+                      <p>{t(`experience.${exp.key}.description2`)}</p>
+                      <p>{t(`experience.${exp.key}.description3`)}</p>
+                      <p className="pt-2">
+                        <span className="font-medium text-dark-text">
+                          {t(`experience.${exp.key}.technologiesLabel`)}{' '}
+                        </span>
+                        <span className="text-sm opacity-90">
+                          {t(`experience.${exp.key}.technologies`)}
+                        </span>
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-dark-muted leading-relaxed">
+                      {t(`experience.${exp.key}.description`)}
+                    </p>
+                  )}
                 </motion.div>
               </div>
             ))}
