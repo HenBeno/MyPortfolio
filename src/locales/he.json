@@ -88,6 +88,18 @@
       "year": "2025",
       "link": "קראו את המאמר שלי על GherkinMate"
     },
+    "javaAutomation": {
+      "title": "Java Multi-Platform Automation Testing Project",
+      "description": "מסגרת אוטומציית QA רב-פלטפורמית ל-Web, API, מובייל, Electron ודסקטופ. בנויה עם Java, Maven, TestNG ו-Page Object Model. כוללת Grafana (ווב ו-API), UK Mortgage Calculator (Appium), מחשבון Windows, TodoList (Electron) - עם Selenium, REST Assured, Appium, WinAppDriver, SikuliX ודיווח Allure.",
+      "tech": "Java, Maven, TestNG, Selenium, REST Assured, Appium, WinAppDriver, SikuliX, Allure",
+      "link": "לצפייה ב-GitHub"
+    },
+    "pythonAutomation": {
+      "title": "Python Multi-Platform Automation Testing Project",
+      "description": "מסגרת אוטומציית QA רב-פלטפורמית ל-Web, Web API, מובייל (Android), Electron ודסקטופ. בנויה עם Python, pytest ו-Page Object Model. כוללת Cypress Real World App, JSON Server API, Financial Calculators (Appium), TodoList (Electron), מחשבון Windows - עם Selenium, Appium, WinAppDriver, Applitools Eyes ודיווח Allure.",
+      "tech": "Python, pytest, Selenium, Appium, WinAppDriver, Applitools, Allure, MySQL",
+      "link": "לצפייה ב-GitHub"
+    },
     "github": {
       "title": "פרויקטים ב-GitHub",
       "description": "מוזמנים לצפות בפרויקטים האישיים שלי ובתרומות לקוד פתוח ב-GitHub.",

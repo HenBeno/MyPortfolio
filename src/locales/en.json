@@ -41,7 +41,7 @@
       "title": "Automation & Infrastructure Developer & Tech Lead",
       "company": "Bank Leumi",
       "period": "2023 – Present",
-      "description1": "Leading automation infrastructure development for critical banking systems and end-to-end management of the testing domain—manual and automated. In this role I drive organizational transformation in QA, with tight alignment between testing, development, and infrastructure.",
+      "description1": "Leading automation infrastructure development for critical banking systems and end-to-end management of the testing domain - manual and automated. In this role I drive organizational transformation in QA, with tight alignment between testing, development, and infrastructure.",
       "description2": "I established and lead automation infrastructure based on Java, Appium, Selenium, JUnit, and Cucumber, applying Design-First principles, clean OOP, and scalable, maintainable architecture. I led the integration of manual testers into automation through Cucumber and Gherkin, enabling teams without a programming background to contribute to automated test scenarios.",
       "description3": "I worked in close collaboration with development teams, led quality improvement processes, delivered lectures and professional training, and implemented advanced standards for test infrastructure development. The work is carried out on high business-impact systems, with emphasis on reliability, stability, long-term maintainability, and scale.",
       "technologiesLabel": "Technologies & environments:",
@@ -87,6 +87,18 @@
       "tech": "Web Development, Cucumber, BDD Framework",
       "year": "2025",
       "link": "View my article about GherkinMate"
+    },
+    "javaAutomation": {
+      "title": "Java Multi-Platform Automation Testing Project",
+      "description": "Multi-platform QA automation framework for Web, API, Mobile, Electron, and Desktop. Built with Java, Maven, TestNG, and Page Object Model. Covers Grafana (web & API), UK Mortgage Calculator (Appium), Windows Calculator, TodoList (Electron) - with Selenium, REST Assured, Appium, WinAppDriver, SikuliX, and Allure reporting.",
+      "tech": "Java, Maven, TestNG, Selenium, REST Assured, Appium, WinAppDriver, SikuliX, Allure",
+      "link": "View on GitHub"
+    },
+    "pythonAutomation": {
+      "title": "Python Multi-Platform Automation Testing Project",
+      "description": "Multi-platform QA automation framework for Web, Web API, Mobile (Android), Electron, and Desktop. Built with Python, pytest, and Page Object Model. Covers Cypress Real World App, JSON Server API, Financial Calculators (Appium), TodoList (Electron), Windows Calculator - with Selenium, Appium, WinAppDriver, Applitools Eyes, and Allure reporting.",
+      "tech": "Python, pytest, Selenium, Appium, WinAppDriver, Applitools, Allure, MySQL",
+      "link": "View on GitHub"
     },
     "github": {
       "title": "GitHub Projects",

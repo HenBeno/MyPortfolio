@@ -11,6 +11,13 @@ interface GitHubRepo {
   stargazers_count: number;
 }
 
+/** Only these GitHub repos are shown in the Projects section */
+const GITHUB_REPOS_WHITELIST = [
+  'Java_Multi_Platform_Automation_Testing_Project',
+  'Python_Multi_Platform_Automation_Testing_Project',
+  'BlockChainTransactionAnalyzer',
+];
+
 const Projects = () => {
   const { t } = useTranslation();
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
@@ -19,10 +26,11 @@ const Projects = () => {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/HenBeno/repos?sort=updated&per_page=6');
+        const response = await fetch('https://api.github.com/users/HenBeno/repos?sort=updated&per_page=100');
         if (response.ok) {
-          const data = await response.json();
-          setRepos(data);
+          const data: GitHubRepo[] = await response.json();
+          const filtered = data.filter((repo) => GITHUB_REPOS_WHITELIST.includes(repo.name));
+          setRepos(filtered);
         }
       } catch (error) {
         console.error('Failed to fetch GitHub repos:', error);
@@ -63,7 +71,10 @@ const Projects = () => {
                     <h3 className="text-2xl font-bold text-dark-text mb-2">
                       {t('projects.gherkinMate.title')}
                     </h3>
-                    <span className="text-primary text-sm font-mono">{t('projects.gherkinMate.year')}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary text-sm font-mono">{t('projects.gherkinMate.year')}</span>
+                      <span className="text-primary text-xs font-mono px-1.5 py-0.5 rounded bg-primary/20 border border-primary/40" title="TypeScript">TS</span>
+                    </div>
                   </div>
                   <Code2 className="text-primary" size={32} />
                 </div>
@@ -122,7 +133,29 @@ const Projects = () => {
               <div className="text-center py-8 text-dark-muted">{t('projects.loading')}</div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {repos.slice(0, 4).map((repo, index) => (
+                {[...repos]
+                  .sort((a, b) => {
+                    const order: Record<string, number> = {
+                      Java_Multi_Platform_Automation_Testing_Project: 0,
+                      Python_Multi_Platform_Automation_Testing_Project: 1,
+                      BlockChainTransactionAnalyzer: 2,
+                    };
+                    return (order[a.name] ?? 3) - (order[b.name] ?? 3);
+                  })
+                  .map((repo, index) => {
+                  const projectImage =
+                    repo.name === 'Java_Multi_Platform_Automation_Testing_Project'
+                      ? 'java-automation-framework.png'
+                      : repo.name === 'Python_Multi_Platform_Automation_Testing_Project'
+                        ? 'python-automation-framework.png'
+                        : null;
+                  const descriptionText =
+                    repo.name === 'Java_Multi_Platform_Automation_Testing_Project'
+                      ? t('projects.javaAutomation.description')
+                      : repo.name === 'Python_Multi_Platform_Automation_Testing_Project'
+                        ? t('projects.pythonAutomation.description')
+                        : repo.description || 'No description available';
+                  return (
                   <motion.a
                     key={repo.name}
                     href={repo.html_url}
@@ -132,14 +165,21 @@ const Projects = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="block p-4 bg-dark-bg border border-dark-border rounded-lg hover:border-primary/50 hover:bg-dark-surface transition-all"
+                    className="group block p-4 bg-dark-bg border border-dark-border rounded-lg hover:border-primary/50 hover:bg-dark-surface transition-all overflow-hidden"
                   >
+                    {projectImage && (
+                      <img
+                        src={`${import.meta.env.BASE_URL}assets/images/${projectImage}`}
+                        alt=""
+                        className="w-full h-32 object-cover rounded-t-lg -mx-4 -mt-4 mb-3 border-b border-dark-border"
+                      />
+                    )}
                     <h4 className="text-dark-text font-semibold mb-2 flex items-center gap-2">
                       {repo.name}
                       <ExternalLink size={14} className="text-dark-muted" />
                     </h4>
-                    <p className="text-dark-muted text-sm mb-3 line-clamp-2">
-                      {repo.description || 'No description available'}
+                    <p className="text-dark-muted text-sm mb-3 line-clamp-2 group-hover:line-clamp-none transition-[line-clamp] duration-200">
+                      {descriptionText}
                     </p>
                     <div className="flex items-center gap-4 text-xs text-dark-muted">
                       {repo.language && (
@@ -153,7 +193,8 @@ const Projects = () => {
                       )}
                     </div>
                   </motion.a>
-                ))}
+                  );
+                })}
               </div>
             )}
           </motion.div>
