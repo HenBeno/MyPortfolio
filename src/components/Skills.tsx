@@ -40,8 +40,10 @@ const Skills = () => {
       skills: [
         { name: 'Appium', icon: Smartphone },
         { name: 'UiAutomator2', icon: Smartphone },
-        { name: 'Verisoft', icon: Smartphone },
         { name: 'Perfecto Mobile', icon: Smartphone },
+        { name: 'iOS', icon: Smartphone },
+        { name: 'Android', icon: Smartphone },
+        { name: 'XCUITest', icon: Smartphone },
       ],
     },
     {
@@ -83,6 +85,7 @@ const Skills = () => {
         { name: 'Maven', icon: Workflow },
         { name: 'Jenkins', icon: Workflow },
         { name: 'Azure DevOps', icon: GitBranch },
+        { name: 'AWS', icon: Server },
         { name: 'ReportPortal', icon: Server },
         { name: 'Git/Bitbucket', icon: GitBranch },
       ],
@@ -93,6 +96,7 @@ const Skills = () => {
       color: 'text-pink-400',
       skills: [
         { name: 'AI + Automation', icon: Sparkles },
+        { name: 'Amazon Q', icon: Brain },
         { name: 'Playwright', icon: PlayCircle },
         { name: 'Robot Framework', icon: Zap },
         { name: 'Visual Validation', icon: Eye },

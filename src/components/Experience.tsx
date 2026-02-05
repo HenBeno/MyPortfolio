@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar } from 'lucide-react';
+import { useRTL } from '../hooks/useRTL';
 
 const Experience = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { isRTL } = useRTL();
 
   const experiences = [
     {
@@ -35,22 +37,22 @@ const Experience = () => {
 
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="relative"
           >
             {/* Timeline Line */}
-            <div 
-              className="absolute top-0 bottom-0 left-8 w-0.5 bg-primary/30"
+            <div
+              className="absolute top-0 bottom-0 left-8 w-0.5 bg-primary/30 rtl:left-auto rtl:right-8"
             />
 
             {/* Experience Items */}
             {experiences.map((exp, index) => (
-              <div key={exp.key} className="relative mb-12 pl-20">
+              <div key={exp.key} className="relative mb-12 pl-20 rtl:pl-0 rtl:pr-20">
                 {/* Timeline Marker */}
-                <div className="absolute top-2 left-0 w-16 h-16 rounded-full bg-dark-card border-4 border-primary flex items-center justify-center">
+                <div className="absolute top-2 left-0 w-16 h-16 rounded-full bg-dark-card border-4 border-primary flex items-center justify-center rtl:left-auto rtl:right-0">
                   <Briefcase className="text-primary" size={24} />
                 </div>
 
@@ -79,9 +81,25 @@ const Experience = () => {
                     <Calendar size={16} />
                     <span>{t(`experience.${exp.key}.period`)}</span>
                   </div>
-                  <p className="text-dark-muted leading-relaxed">
-                    {t(`experience.${exp.key}.description`)}
-                  </p>
+                  {i18n.exists(`experience.${exp.key}.description1`) ? (
+                    <div className="space-y-3 text-dark-muted leading-relaxed">
+                      <p>{t(`experience.${exp.key}.description1`)}</p>
+                      <p>{t(`experience.${exp.key}.description2`)}</p>
+                      <p>{t(`experience.${exp.key}.description3`)}</p>
+                      <p className="pt-2">
+                        <span className="font-medium text-dark-text">
+                          {t(`experience.${exp.key}.technologiesLabel`)}{' '}
+                        </span>
+                        <span className="text-sm opacity-90">
+                          {t(`experience.${exp.key}.technologies`)}
+                        </span>
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-dark-muted leading-relaxed">
+                      {t(`experience.${exp.key}.description`)}
+                    </p>
+                  )}
                 </motion.div>
               </div>
             ))}

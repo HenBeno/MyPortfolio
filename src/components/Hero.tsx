@@ -163,7 +163,7 @@ const Hero = () => {
           className="flex flex-col items-center text-dark-muted hover:text-primary transition-colors"
           aria-label="Scroll down"
         >
-          <span className="text-sm mb-2">Scroll</span>
+          <span className="text-sm mb-2">{t('hero.scroll')}</span>
           <ChevronDown className="animate-bounce" size={24} />
         </button>
       </motion.div>
