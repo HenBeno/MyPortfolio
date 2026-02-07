@@ -17,6 +17,7 @@ import {
   Eye,
   Zap,
 } from 'lucide-react';
+import TechLogosStrip from './TechLogosStrip';
 
 const Skills = () => {
   const { t } = useTranslation();
@@ -122,10 +123,20 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-dark-muted text-center mb-12 text-lg"
+          className="text-dark-muted text-center mb-8 text-lg"
         >
           {t('skills.description')}
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mb-14"
+        >
+          <TechLogosStrip title={t('skills.toolsStrip')} />
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {skillCategories.map((category, categoryIndex) => {
