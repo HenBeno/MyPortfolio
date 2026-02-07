@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown, Code, Zap, Brain } from 'lucide-react';
+import { ChevronDown, Code, Zap, Brain, Terminal, Bot, Cpu, Workflow, GitBranch, Binary } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -53,6 +53,34 @@ const Hero = () => {
             backgroundSize: '50px 50px',
           }}
         />
+
+        {/* Floating Dev / Automation Icons */}
+        {[
+          { Icon: Terminal, x: '10%', y: '15%', delay: 0, size: 28 },
+          { Icon: Bot, x: '85%', y: '20%', delay: 0.3, size: 24 },
+          { Icon: Cpu, x: '15%', y: '70%', delay: 0.6, size: 26 },
+          { Icon: Workflow, x: '80%', y: '65%', delay: 0.2, size: 30 },
+          { Icon: GitBranch, x: '5%', y: '45%', delay: 0.5, size: 22 },
+          { Icon: Binary, x: '92%', y: '45%', delay: 0.4, size: 24 },
+          { Icon: Code, x: '25%', y: '85%', delay: 0.1, size: 20 },
+          { Icon: Zap, x: '75%', y: '12%', delay: 0.7, size: 26 },
+        ].map(({ Icon, x, y, delay, size }, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.12 }}
+            transition={{ duration: 1, delay: 0.5 + delay }}
+            className="absolute text-primary pointer-events-none"
+            style={{ left: x, top: y }}
+          >
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4 + i * 0.5, repeat: Infinity, ease: 'easeInOut', delay: delay }}
+            >
+              <Icon size={size} strokeWidth={1.5} />
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -71,6 +71,7 @@
   "skills": {
     "title": "Skills & Technologies",
     "description": "From mobile automation to backend APIs, from DevOps pipelines to emerging AI tools - building comprehensive automation infrastructures.",
+    "toolsStrip": "Tools & platforms I work with",
     "languages": "Programming Languages",
     "mobile": "Mobile Automation",
     "web": "Web Automation",
